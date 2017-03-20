@@ -1,0 +1,15 @@
+<html>
+  <head></head>
+  <body>
+    <input type="text" placeholder="Insert Some Text Here" id="utterThis"/>
+    <button onclick="speak()">Say This</button>
+
+    <script>
+      var synth = window.speechSynthesis;
+      var speak = function(){
+        var utterThis = new SpeechSynthesisUtterance(document.getElementById('utterThis').value);
+        synth.speak(utterThis);
+      }
+    </script>
+  </body>
+</html>
